@@ -15,12 +15,12 @@ public class Praktikum {
         int days = 255;
         LocalDate date = LocalDate.of(year,1,1);
         LocalDate dateDeveloper = date.plusDays(days);
-
+        String result = dateDeveloper.format(DateTimeFormatter.ofPattern("dd.MM.uuuu"));
         if (isLeapYear(year)) {
-            System.out.println("День программиста в високосный год: "+dateDeveloper.format(DateTimeFormatter.ofPattern("dd.MM.uuuu")));
+            System.out.println("День программиста в високосный год: "+result);
         }
         else{
-            System.out.println("День программиста в НЕ високосный год: "+dateDeveloper.format(DateTimeFormatter.ofPattern("dd.MM.uuuu")));
+            System.out.println("День программиста в НЕ високосный год: "+result);
         }
     }
 
